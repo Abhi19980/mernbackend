@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-overright.css">
+
+    <!-- Plugin -->
+    <link rel="stylesheet" href="css/plugin/select2.min.css">
+    <link rel="stylesheet" href="css/plugin/select2-overright.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/web.css">
+
+    <title>Interview</title>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="css/plugin/split-pane.css" />
+
+    <div class="wrapper nav-fix-wrapper bg-light">
+
+        <!-- Navbar - Start -->
+        <nav class="navbar navbar-expand-lg py-lg-0 fixed-top navbar-light bg-white">
+            <div class="container-fluid">
+                <a class="navbar-brand h3 m-0 text-dark fw-bold" href="#"><img src="images/logo-code.svg"
+                        width="30"><span class="text-success ps-2">Code</span> Jobma</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar-text d-inline-flex text-dark fw-bold f-h6 align-items-center ms-auto">
+                        <span class="pe-4"><i class="fa fa-clock me-2"></i>51 mins</span>
+                        <span class="pe-4"><i class="fa fa-clipboard-check me-2"></i>Answered: 0 / 2</span>
+                        <span class="pe-4"><button type="button" class="btn btn-light px-4 disabled"
+                                disabled="disabled">Finish Interview</button></span>
+                    </div>
+                    <ul class="navbar-nav mb-2 mb-lg-0 border-lg-start ps-lg-3 pt-2 pt-lg-0 border-top border-lg-top-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="d-flex align-items-center"><span class="pe-3">Hi</span><span
+                                        class="avatar">S</span></div>
+                            </a>
+                            <ul class="dropdown-menu text-center dropdown-menu-end">
+                                <li><a class="dropdown-item py-2" href="#">View Instructions</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="d-grid px-3 py-2"><button type="button" class="btn btn-success">Submit
+                                        Test</button></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar - End -->
+
+
+        <!-- Video Recording Thumb - Start -->
+        <div class="video-recording-thumb" id="video-recording-thumb"><a href="#" class="nav-top"></a>
+            <div class="video-section"></div>
+        </div>
+        <!-- Use "minimize" class with parent div to minimize -->
+        <!-- Video Recording Thumb - End -->
+
+
+        <!-- Content Section - Start -->
+        <div class="interview-web">
+
+            <div class="side-menu">
+                <div class="list-group list-group-flush text-center">
+                    <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="tooltip"
+                        data-bs-placement="right" title="Instructions"><img src="images/icons/info-circle.svg"
+                            width="25"></a>
+                    <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="tooltip"
+                        data-bs-placement="right" title="All Questions List"><i class="feather-list h4 m-0"></i></a>
+                </div>
+
+                <div class="text-center border-top pt-2">
+                    <h5 class="mb-2">Q</h5>
+                    <div class="list-group f-h6 mx-2">
+                        <a href="#" class="list-group-item list-group-item-action que-num-list px-0">1</a>
+                        <a href="#" class="list-group-item list-group-item-action que-num-list px-0">2</a>
+                        <a href="#" class="list-group-item list-group-item-action que-num-list px-0">3</a>
+                        <a href="#" class="list-group-item list-group-item-action que-num-list px-0">4</a>
+                        <a href="#" class="list-group-item list-group-item-action que-num-list px-0">5</a>
+                        <a href="#" class="list-group-item list-group-item-action que-num-list px-0 disabled">6</a>
+                        <a href="#" class="list-group-item list-group-item-action que-num-list px-0 disabled">7</a>
+                        <a href="#" class="list-group-item list-group-item-action que-num-list px-0 disabled">8</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-fluid h-100 px-0">
+                <!-- Setting Test - Start -->
+                <div class="card mb-4 border-0">
+                    <div class="card-body p-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="border border-5 text-center rounded">
+                                    <img src="images/icons/interview.svg" class="img-fluid m-4">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <h5 class="mb-2 display-7">System Check</h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, eatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas sit aspernatur aut odit aut fugit</p>
+                                <div class="mt-3">
+                                    <div class="setting-check d-flex my-2 done">
+                                        <span class="pe-3"><i class="feather-wifi h2"></i></span>
+                                        <div>
+                                            <h6 class="mb-0">Network</h6>
+                                            Checking your network connectivity
+                                        </div>
+                                    </div>
+                                    <div class="setting-check d-flex my-2 wrong">
+                                        <span class="pe-3"><i class="feather-mic h2"></i></span>
+                                        <div>
+                                            <h6 class="mb-0">Microphone</h6>
+                                            Checking your Microphone Setting
+                                            <div class="text-danger">There is some issue with Microphone</div>
+                                        </div>
+                                    </div>
+                                    <div class="setting-check d-flex my-2 checking">
+                                        <span class="pe-3"><i class="feather-camera h2"></i></span>
+                                        <div>
+                                            <h6 class="mb-0">Webcame</h6>
+                                            Checking your Camera Setting
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-success mt-3 px-4">Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Setting Test - End -->
+
+                <!-- Instructions - Start -->
+                <div class="card mb-4 border-0">
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 align-self-center">
+                                <h4 class="text-warning">Instructions</h4>
+                                <h6 class="mb-4">This is a sample test to help you get familiar with the Code.Jobma test
+                                    environment.</h6>
+                                <div class="mb-2">
+                                    <ol class="ps-3">
+                                        <li class="mb-2">This is a timed test. Please make sure you are not interrupted
+                                            during the test, as the timer cannot be paused once started.</li>
+                                        <li class="mb-2">Please ensure you have a stable internet connection.</li>
+                                        <li class="mb-2">We recommend you to try the sample test for a couple of
+                                            minutes, before taking the main test.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xl-auto"><img src="images/icons/interview.svg" width="300"></div>
+                        </div>
+
+                    </div>
+                    <div class="card-footer d-flex justify-content-end">
+                        <button type="button" class="btn btn-success px-4">Continue</button>
+                    </div>
+                </div>
+                <!-- Instructions - End -->
+
+                <!-- All Question List - Start -->
+                <div class="card mb-4 border-0">
+                    <div class="card-header">
+                        <h6 class="mb-0">List</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responive">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th colspan="2">Questions</th>
+                                    <th>Type</th>
+                                    <th class="text-end"></th>
+                                </tr>
+                                <tr>
+                                    <th width="30">1</th>
+                                    <td>Are you an expert on data structures?</td>
+                                    <td>Multiple Choice</td>
+                                    <td class="text-end"><button type="button"
+                                            class="btn btn-success btn-sm">Solve</button></td>
+                                </tr>
+                                <tr>
+                                    <th width="30">2</th>
+                                    <td>Explain the difference b/w static and dynamic websites?</td>
+                                    <td>Essay</td>
+                                    <td class="text-end"><button type="button"
+                                            class="btn btn-success btn-sm">Solve</button></td>
+                                </tr>
+                                <tr>
+                                    <th width="30">3</th>
+                                    <td>What is the name of scripting engine in PHP?</td>
+                                    <td>Coding</td>
+                                    <td class="text-end"><button type="button"
+                                            class="btn btn-success btn-sm">Solve</button></td>
+                                </tr>
+                                <tr>
+                                    <th width="30">4</th>
+                                    <td>What are the popular frameworks in PHP?</td>
+                                    <td>Essay</td>
+                                    <td class="text-end"><button type="button"
+                                            class="btn btn-success btn-sm">Solve</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-end">
+                        <button type="button" class="btn btn-secondary px-4">Continue</button>
+                    </div>
+                </div>
+                <!-- All Question List - End -->
+
+                <!-- MCQ - Start -->
+                <div class="card mb-4 border-0">
+                    <div class="card-body">
+                        <h6>Which program is used by web clients to view the web pages?</h6>
+                        <hr />
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo.</p>
+                        <div class="">
+                            <div class="form-check my-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault1"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Web browser</label>
+                            </div>
+                            <div class="form-check my-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault2"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Protocol</label>
+                            </div>
+                            <div class="form-check my-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault3"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Web server</label>
+                            </div>
+                            <div class="form-check my-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault4"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Search Engine</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-end">
+                        <button type="button" class="btn btn-success px-4">Continue</button>
+                    </div>
+                </div>
+                <!-- MCQ - End -->
+
+                <!-- Essay - Start -->
+                <div class="card mb-4 border-0">
+                    <div class="card-body">
+                        <h6>What is common between Webkit, Trident and Gecko?</h6>
+                        <hr />
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo.</p>
+                        <div class="">
+                            <textarea class="form-control" rows="8"></textarea>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-end">
+                        <button type="button" class="btn btn-success px-4">Continue</button>
+                    </div>
+                </div>
+                <!-- Essay - End -->
+
+                <!-- Coding - Start -->
+                <div class="coding-wrapper">
+                    <div class="card h-100 border-0">
+
+                        <div class="card-body h-100">
+
+                            <div class="split-pane fixed-left" id="split-pane-2">
+
+                                <div class="split-pane-component border-end" id="left-component">
+                                    <h6>What is common between Webkit, Trident and Gecko?</h6>
+                                    <hr />
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                    <div class="accordion code-accordion my-2">
+                                        <div class="accordion-item">
+                                            <div class="accordion-header">
+                                                <div class="accordion-button bg-light2 collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#accordion1">Input Format
+                                                    for Custom Testing</div>
+                                            </div>
+                                            <div id="accordion1" class="accordion-collapse collapse">
+                                                <div class="accordion-body">
+                                                    <p>Input from stdin will be processed as follows and passed to the
+                                                        function.</p>
+                                                    <p>The first line contains two space-separated integers,
+                                                        graph_nodes, the number of nodes, and graph_edges, the number of
+                                                        edges. Each of the next m lines contains two space-separated
+                                                        integers, graph_from[i] and graph_to[i], two nodes connected by
+                                                        an edge.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion code-accordion my-2">
+                                        <div class="accordion-item">
+                                            <div class="accordion-header">
+                                                <div class="accordion-button bg-light2" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#accordion2"
+                                                    aria-expanded="false">Sample Case 0</div>
+                                            </div>
+                                            <div id="accordion2" class="accordion-collapse collapse show" style="">
+                                                <div class="accordion-body">
+                                                    <p class="mb-2 h7">Sample Input 0</p>
+                                                    <div class="bg-light-info p-3 mb-3">
+                                                        <pre>STDIN&nbsp;&nbsp;&nbsp;  &nbsp;Function 
+                              -----&nbsp;&nbsp;  &nbsp;&nbsp;--------- 
+                              4&nbsp;2&nbsp;&nbsp; →&nbsp;   graph_nodes = 4 nodes, graph_edges = 2 edges
+                              1 2   →    graph_from[] = [1, 1], graph_to[] = [2, 4]
+                              1 4
+                              </pre>
+                                                    </div>
+                                                    <p class="mb-2 h7">Sample Output 0</p>
+                                                    <div class="bg-light-info p-3 mb-3">
+                                                        <pre>0</pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="split-pane-divider" id="vertical-divider"></div>
+
+                                <div class="split-pane-component bg-light3" id="right-component">
+                                    <div class="split-pane horizontal-percent">
+
+                                        <div class="split-pane-component" id="top-component2">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-4 mb-3">
+                                                    <select class="select2-white">
+                                                        <option>C++</option>
+                                                        <option>PHP</option>
+                                                        <option>Jquery</option>
+                                                        <option>Javascript</option>
+                                                        <option>Python</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-auto ms-auto">
+                                                    <button type="button" class="btn btn-link text-dark mb-3"
+                                                        data-bs-toggle="modal" data-bs-target="#code-help-modal"><i
+                                                            class="feather-help-circle f-h5"></i></button>
+                                                    <button type="button" class="btn btn-secondary mb-3">Run
+                                                        Code</button>
+                                                    <button type="button" class="btn btn-secondary mb-3">Run
+                                                        Test</button>
+                                                    <button type="button" class="btn btn-success mb-3">Submit</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="write-code-block bg-white border rounded p-3">
+                                                <div class="">
+                                                    <pre>STDIN&nbsp;&nbsp;&nbsp;  &nbsp;Function 
+                            -----&nbsp;&nbsp;  &nbsp;&nbsp;--------- 
+                            4&nbsp;2&nbsp;&nbsp; →&nbsp;   graph_nodes = 4 nodes, graph_edges = 2 edges
+                            1 2   →    graph_from[] = [1, 1], graph_to[] = [2, 4]
+                            1 4
+                            -----&nbsp;&nbsp;  &nbsp;&nbsp;--------- 
+                            4&nbsp;2&nbsp;&nbsp; →&nbsp;   graph_nodes = 4 nodes, graph_edges = 2 edges
+                            1 2   →    graph_from[] = [1, 1], graph_to[] = [2, 4]
+                            1 4
+                            </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="split-pane-divider" id="horizontal-divider2"></div>
+
+                                        <div class="split-pane-component" id="bottom-component2">
+                                            <div class="check-answer-block rounded bg-light2">
+                                                <div class="a1 p-3">
+                                                    <ul class="nav nav-tabs f-h6">
+                                                        <li class="nav-item">
+                                                            <button class="nav-link fw-bold active" id="home-tab"
+                                                                data-bs-toggle="tab" data-bs-target="#result-tab"
+                                                                type="button">Test Results</button>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <button class="nav-link fw-bold" id="profile-tab"
+                                                                data-bs-toggle="tab" data-bs-target="#input-tab"
+                                                                type="button">Custom Input</button>
+                                                        </li>
+                                                    </ul>
+                                                    <div
+                                                        class="tab-content b1 bg-white border-start border-bottom border-end">
+                                                        <div class="tab-pane p-3 scroller-section2 fade show active"
+                                                            id="result-tab" role="tabpanel">
+                                                            See your output
+                                                            <p>Sed ut perspiciatis unde omnis iste natus error sit
+                                                                voluptatem accusantium doloremque laudantium, totam rem
+                                                                aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                                                quasi architecto beatae vitae dicta sunt explicabo. ut
+                                                                perspiciatis unde omnis iste natus error sit voluptatem
+                                                                accusantium dol quasi architecto beatae vitae dicta sunt
+                                                                explicabo. ut perspiciatis unde omnis iste natus error
+                                                                sit voluptatem accusantium dooremque laudantium, totam
+                                                                rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                                                et quasi architecto beatae vitae dicta sunt explicabo.
+                                                            </p>
+                                                            <p>Sed ut perspiciatis unde omn ium dol quasi architecto
+                                                                beatae vitae dicta sunt explicabo. ut perspiciatis unde
+                                                                omnis iste natus error sit voluptatis unde omnis iste
+                                                                natus error sit voluptatem accusantium doloremque
+                                                                laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                                                inventore veritatis et quasi architecto beatae vitae
+                                                                dicta sunt explicabo. ut perspiciatis unde omnis iste
+                                                                natus errotem accuis iste natus error sit voluptatem
+                                                                accusantium doloremque laudantium, totam rem aperiam,
+                                                                eaque ipsa quae ab illo inventore veritatis et quasi
+                                                                architecto beatae vitae dicta sunt explicabo.</p>
+                                                        </div>
+                                                        <div class="tab-pane p-3 fade" id="input-tab" role="tabpanel">
+                                                            ...</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Coding - End -->
+
+            </div>
+
+
+        </div>
+        <!-- Content Section - End -->
+
+    </div>
+
+
+    <!-- Reset password - Modals Start -->
+    <div class="modal fade" id="code-help-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Help!</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="h7">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+                    <ol class="ps-3">
+                        <li class="my-2">Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit am</li>
+                        <li class="my-2">Res eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam</li>
+                        <li class="my-2">Untur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+                            quisquam est, qui do</li>
+                    </ol>
+                    <div class="bg-light-info p-3 mb-3">
+                        <pre>STDIN&nbsp;&nbsp;&nbsp;  &nbsp;Function 
+          -----&nbsp;&nbsp;  &nbsp;&nbsp;--------- 
+          4&nbsp;2&nbsp;&nbsp; →&nbsp;   graph_nodes = 4 nodes, graph_edges = 2 edges
+          1 2   →    graph_from[] = [1, 1], graph_to[] = [2, 4]
+          1 4
+          </pre>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Select 2 -->
+    <script src="js/plugin/select2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('select').select2({
+                placeholder: "Select here"
+            });
+        });
+    </script>
+
+
+
+    <script type="text/javascript">
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("load resize scroll", function () {
+            var windowtHig = $(window).height();
+            var windowwidth = $(window).width();
+            var navHig = $(".navbar").height();
+            var titleHig = $("#title-wrapper").height();
+            var headerGutter = navHig + titleHig;
+            if (windowwidth >= 991) {
+                $(".body-wrapper").css({ "height": windowtHig - headerGutter + "px" });
+            }
+        });
+    </script>
+
+
+    <!-- Page Script - Start -->
+    <script>
+        $(window).on("load resize scroll", function (event) {
+            var filters_toggle_form = $("#sidebar-filter");
+
+            if ($(window).width() < 991) {
+                filters_toggle_form.addClass("collapse");
+            }
+            else {
+                filters_toggle_form.removeClass("collapse");
+            }
+        });
+    </script>
+    <!-- Page Script - End -->
+
+
+    <!-- Coding Interview Script - Start -->
+    <script type="text/javascript">
+        $(window).on("load resize scroll", function () {
+            var windowtHig = $(window).height();
+            var windowwidth = $(window).width();
+            var navHig = $(".navbar").height();
+            var titleHig = $("#title-wrapper").height();
+            var headerGutter = navHig;
+            if (windowwidth >= 991) {
+                $(".coding-wrapper").css({ "height": windowtHig - headerGutter - 42 + "px" });
+            }
+        });
+    </script>
+    <!-- Coding Interview Script - End -->
+
+
+    <script type="text/javascript">
+        $("#preview-btn").click(function () {
+            $("#email-preview").toggle();
+            $("#preview-btn").toggleClass("email-show")
+        });
+    </script>
+
+
+
+    <!-- Panel Split -->
+    <script src="js/plugin/split-pane.js"></script>
+    <script>
+        $(function () {
+            $('div.split-pane').splitPane();
+        });
+    </script>
+
+
+    <!-- Make the DIV element draggagle -->
+    <script>
+        dragElement(document.getElementById("video-recording-thumb"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
