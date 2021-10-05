@@ -26,6 +26,10 @@ hbs.registerPartials(partials_path);
 app.get("/", (req, res) => {
     res.render("register");
 });
+
+app.get("/mcq", (req, res) => {
+    res.render("mcq");
+  });
 // app.get("./register",(req,res)=>{
 //     res.render("register");
 // })
@@ -66,6 +70,13 @@ app.post('/register', async (req, res) => {
         res.status(201).json({ message: 'User registered' })
     } catch (e) { console.error(e); res.json(e) }
 })
+
+
+
+
+
+
+
 
 app.listen(port, () => {
     console.log(`server is running at port no ${port}`);
