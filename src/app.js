@@ -1,4 +1,22 @@
 const express = require("express");
+const bcrypt = require("bcryptjs");
+const session = require("express-session");
+const MongoDBSession = require("connect-mongodb-session")(session);
+const mongoose = require("mongoose");
+
+
+const UserModel = require("./models/registers");
+const mongoURI = "mongodb://localhost:27017/registration"
+
+
+const store = new MongoDBSession({
+    uri: mongoURI,
+    collection: "mysession",
+});
+
+
+
+
 // var bodyParser = require("body-parser")
 const path = require("path");
 const app = express();
@@ -16,10 +34,21 @@ const partials_path = path.join(__dirname, "../templates/partials");
 
 
 
+
 // this console command is to show the folder,file structure
 // console.log(path.join(__dirname,"../public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
+// middel ware and object
+app.use(session({
+    secret: 'key that will sign cookie',
+    resave: false,
+    saveUninitialized: false,
+    store: store,
+}))
+
 
 
 app.use(express.static(static_path));
@@ -32,9 +61,49 @@ app.get("/", (req, res) => {
     res.render("register");
 });
 
+app.post("/register", async(req, res) => {
+    const { username, email, password}= req.body;
+
+    let user = await UserModel.findOne({ email });
+
+    if(user) {
+        return res.redirect("/login");
+    }
+
+    const hashedPsw = await bcrypt.hash(password, 12);
+
+    user = new UserModel({
+        username,
+        email,
+        password: hashedPsw
+    });
+
+    await user.save();
+
+    res.redirect("/login");
+});
+
+
+
+
+
+app.get("/login", (req, res) => {
+    req.session.isAuth = true;
+    console.log(req.session);
+    console.log(req.session.id);
+    res.session,isAuth = true;
+    res.render("login");
+
+});
+
+
+
+
+
+
 app.get("/mcq", (req, res) => {
     res.render("mcq");
-  });
+});
 // app.get("./register",(req,res)=>{
 //     res.render("register");
 // })
@@ -59,10 +128,10 @@ app.post("/", async (req, res) => {
 app.post('/register', async (req, res) => {
     try {
         const { firstname, myemail, mypassword } = req.body;
-        const email=myemail
-        const password=mypassword
+        const email = myemail
+        const password = mypassword
         console.log(req.body);
-        console.log({email, password, firstname});
+        console.log({ email, password, firstname });
         const user = await Register.findOne({ email });
         if (user != null) {
             res.status(403).json({ message: 'user already exists' });
