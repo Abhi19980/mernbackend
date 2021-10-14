@@ -125,25 +125,25 @@ app.post("/", async (req, res) => {
     }
 })
 
-app.post('/register', async (req, res) => {
-    try {
-        const { firstname, myemail, mypassword } = req.body;
-        const email = myemail
-        const password = mypassword
-        console.log(req.body);
-        console.log({ email, password, firstname });
-        const user = await Register.findOne({ email });
-        if (user != null) {
-            res.status(403).json({ message: 'user already exists' });
-            return;
-        }
+// app.post('/register', async (req, res) => {
+//     try {
+//         const { firstname, myemail, mypassword } = req.body;
+//         const email = myemail
+//         const password = mypassword
+//         console.log(req.body);
+//         console.log({ email, password, firstname });
+//         const user = await Register.findOne({ email });
+//         if (user != null) {
+//             res.status(403).json({ message: 'user already exists' });
+//             return;
+//         }
 
-        const newUser = new Register({ email, password, confirmpassword: password, username: firstname })
-        await newUser.save()
+//         const newUser = new Register({ email, password, confirmpassword: password, username: firstname })
+//         await newUser.save()
 
-        res.status(201).json({ message: 'User registered' })
-    } catch (e) { console.error(e); res.json(e) }
-})
+//         res.status(201).json({ message: 'User registered' })
+//     } catch (e) { console.error(e); res.json(e) }
+// })
 
 
 
