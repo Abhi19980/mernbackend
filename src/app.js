@@ -47,7 +47,19 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     store: store,
-}))
+}));
+
+
+const isAuth = (req, res, next) => {
+    if(req.session.isAuth) {
+        next();
+    } else {
+        res.redirect("/login");
+    }
+
+};
+
+
 
 
 
@@ -91,7 +103,7 @@ app.get("/login", (req, res) => {
     req.session.isAuth = true;
     console.log(req.session);
     console.log(req.session.id);
-    res.session,isAuth = true;
+    res.session.isAuth = true;
     res.render("login");
 
 });
@@ -99,11 +111,40 @@ app.get("/login", (req, res) => {
 
 
 
+app.post("/login", async (req, res) => {
+    const {email, password} = req.body;
+
+    const user = await UserModel.findOne({email});
+
+    if(!user) {
+        return res.redirect("/login");
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+        return res.redirect("/login");
+    }
+
+    req.session.isAuth = true;
+    res.redirect("/mcq");
+});
 
 
-app.get("/mcq", (req, res) => {
+
+
+
+
+
+
+
+app.get("/mcq", isAuth, (req, res) => {
     res.render("mcq");
 });
+
+
+
+
 // app.get("./register",(req,res)=>{
 //     res.render("register");
 // })
