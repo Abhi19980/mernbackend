@@ -56,7 +56,6 @@ const isAuth = (req, res, next) => {
     } else {
         res.redirect("/login");
     }
-
 };
 
 
@@ -103,7 +102,7 @@ app.get("/login", (req, res) => {
     req.session.isAuth = true;
     console.log(req.session);
     console.log(req.session.id);
-    res.session.isAuth = true;
+    // res.session.isAuth = true;
     res.render("login");
 
 });
